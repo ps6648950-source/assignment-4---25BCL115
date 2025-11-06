@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+char books[3][50];       
+char *ptr[3];           
+int i;
+for(i = 0; i < 3; i++)
+    {
+    ptr[i] = books[i];
+    }
+printf("enter names of 3 books:\n");
+for(i = 0; i < 3; i++)
+    {
+    printf("book %d: ", i + 1);
+    scanf(" %[^\n]", ptr[i]);   
+    } 
+printf("\nyou entered the following books:\n");
+for(i = 0; i < 3; i++) 
+    {
+printf("book %d: %s\n", i + 1, ptr[i]);
+    }
+return 0;
+}
